@@ -1,6 +1,5 @@
 # Generated output files
 output/*.md
-output/*.pdf
 
 # Backup and temp files
 *.bak

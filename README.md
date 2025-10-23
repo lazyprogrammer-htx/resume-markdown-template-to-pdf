@@ -16,7 +16,7 @@ Generate multiple versions of your resume from a single markdown template. Perfe
 - **bash**: For running generate.sh
 - **pandoc**: For PDF generation
 - **xelatex** or **pdflatex**: LaTeX engine for PDF rendering
-- **yq**: For parsing YAML config (required)
+- **yq**: For parsing YAML config (required for anything other than default config)
 
 ### Install Dependencies
 
