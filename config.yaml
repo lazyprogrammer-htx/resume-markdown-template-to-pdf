@@ -55,12 +55,12 @@ global:
 # Template names should include the .TEMPLATE.md extension
 templates:
   # Example: Customize styling for a specific template
-  # 1.TEMPLATE.md:
+  # Example_1.TEMPLATE.md:
   #   font: "Helvetica"
   #   margin: "0.75in"
   #   output_name: "jane_smith_resume"  # Custom output basename (without extension)
 
-  # 2.TEMPLATE.md:
+  # Example_2.TEMPLATE.md:
   #   font: "Times New Roman"
   #   fontsize: "12pt"
   #   output_name: "alex_johnson_resume"
@@ -88,7 +88,7 @@ versions:
 # This has the highest priority (except command-line arguments)
 template_versions:
   # Example: Customize a specific version of a specific template
-  # 1.TEMPLATE.md:
+  # Example_1.TEMPLATE.md:
   #   technical:
   #     output_name: "jane_smith_technical"
   #     fontsize: "10pt"
@@ -96,7 +96,7 @@ template_versions:
   #     output_name: "jane_smith_management"
   #     fontsize: "11pt"
 
-  # 2.TEMPLATE.md:
+  # Example_2.TEMPLATE.md:
   #   creative:
   #     font: "Georgia"
   #     output_name: "alex_johnson_creative"
@@ -111,6 +111,6 @@ template_versions:
 # 4. template_versions
 # 5. Command-line arguments (highest priority)
 #
-# Example: If global.font is "Arial" but template_versions.1.TEMPLATE.md.technical.font
-# is "Courier", then the technical version of 1.TEMPLATE.md will use Courier.
+# Example: If global.font is "Arial" but template_versions.Example_1.TEMPLATE.md.technical.font
+# is "Courier", then the technical version of Example_1.TEMPLATE.md will use Courier.
 # =============================================================================

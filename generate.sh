@@ -422,7 +422,7 @@ main() {
         # Parse comma-separated list
         IFS=',' read -ra TEMPLATE_LIST <<< "$ARG_TEMPLATES"
         for template_spec in "${TEMPLATE_LIST[@]}"; do
-            # Handle both "1" and "templates/1.TEMPLATE.md" formats
+            # Handle both "1" and "templates/Example_1.TEMPLATE.md" formats
             if [[ "$template_spec" == *.TEMPLATE.md ]]; then
                 if [[ -f "$template_spec" ]]; then
                     templates_to_process+=("$template_spec")

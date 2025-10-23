@@ -141,8 +141,8 @@ This generates two versions: `jane.technical.pdf` and `jane.management.pdf`
 ```
 resume-template/
 ├── templates/          # Your .TEMPLATE.md files
-│   ├── 1.TEMPLATE.md
-│   └── 2.TEMPLATE.md
+│   ├── Example_1.TEMPLATE.md
+│   └── Example_2.TEMPLATE.md
 ├── output/             # Generated .md and .pdf files
 ├── config.yaml         # Configuration
 ├── generate.sh              # Generator script
@@ -189,7 +189,7 @@ Customize specific templates:
 
 ```yaml
 templates:
-  1.TEMPLATE.md:
+  Example_1.TEMPLATE.md:
     font: "Helvetica"
     fontsize: "12pt"
     output_name: "jane_smith_resume"  # Custom filename
@@ -212,7 +212,7 @@ Highest specificity (except CLI args):
 
 ```yaml
 template_versions:
-  1.TEMPLATE.md:
+  Example_1.TEMPLATE.md:
     technical:
       output_name: "jane_technical"
       fontsize: "10pt"
@@ -255,7 +255,7 @@ directories:
 
 ## Examples
 
-See `templates/1.TEMPLATE.md` and `templates/2.TEMPLATE.md` for working examples.
+See `templates/Example_1.TEMPLATE.md` and `templates/Example_2.TEMPLATE.md` for working examples.
 
 ## License
 

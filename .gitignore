@@ -1,5 +1,9 @@
 # Generated output files
 output/*.md
+!output/Example_1*.pdf
+
+templates/*.md
+!templates/Example_*.TEMPLATE.md
 
 # Backup and temp files
 *.bak
