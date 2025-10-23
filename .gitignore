@@ -1,0 +1,12 @@
+# Generated output files
+output/*.md
+output/*.pdf
+
+# Backup and temp files
+*.bak
+*.tmp
+*~
+
+# OS files
+.DS_Store
+Thumbs.db

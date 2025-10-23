@@ -1,0 +1,116 @@
+# Dynamic Resume PDF Generator - Configuration File
+
+# =============================================================================
+# DIRECTORY CONFIGURATION
+# =============================================================================
+directories:
+  # Directory containing your .TEMPLATE.md files
+  templates: "templates"
+
+  # Directory where generated .md and .pdf files will be saved
+  output: "output"
+
+# =============================================================================
+# GLOBAL PDF STYLING
+# =============================================================================
+# These settings apply to ALL generated PDFs unless overridden below
+global:
+  # PDF Engine: xelatex (recommended), pdflatex, or lualatex
+  # xelatex provides better font support for system fonts
+  pdf_engine: "xelatex"
+
+  # Font family - with xelatex you can use any system font
+  # Common options: Arial, Helvetica, Times New Roman, Courier, Calibri
+  font: "Arial"
+
+  # Page margins (CSS-style units: in, cm, mm, pt)
+  margin: "0.5in"
+
+  # Page style: empty (no headers/footers) or plain
+  pagestyle: "empty"
+
+  # Font size
+  # Standard LaTeX sizes (default document class): 10pt, 11pt, 12pt
+  # Extended sizes (uses extarticle class automatically): 8pt, 9pt, 14pt, 17pt, 20pt
+  # Sizes beyond 20pt require custom LaTeX and may not work properly
+  # Recommended for professional resumes: 10pt-12pt
+  fontsize: "11pt"
+
+  # Line spacing multiplier (1.0 = single spacing, 1.5 = 1.5x spacing, etc.)
+  linestretch: "1.0"
+
+  # Custom page geometry (overrides the simple 'margin' setting above)
+  # When specified, individual margins for each side can be set:
+  # Uncomment to use custom margins:
+  # geometry_options:
+  #   - top=0.5in
+  #   - bottom=0.5in
+  #   - left=0.5in
+  #   - right=0.5in
+
+# =============================================================================
+# PER-TEMPLATE OVERRIDES
+# =============================================================================
+# Override settings for specific template files
+# Template names should include the .TEMPLATE.md extension
+templates:
+  # Example: Customize styling for a specific template
+  # 1.TEMPLATE.md:
+  #   font: "Helvetica"
+  #   margin: "0.75in"
+  #   output_name: "jane_smith_resume"  # Custom output basename (without extension)
+
+  # 2.TEMPLATE.md:
+  #   font: "Times New Roman"
+  #   fontsize: "12pt"
+  #   output_name: "alex_johnson_resume"
+
+# =============================================================================
+# PER-VERSION OVERRIDES
+# =============================================================================
+# Override settings for specific versions across all templates
+# Version names should match those used in your <!--VERSION:name--> markers
+versions:
+  # Example: Apply consistent styling to all "technical" versions
+  # technical:
+  #   font: "Courier New"
+  #   fontsize: "10pt"
+
+  # Example: Different styling for "creative" versions
+  # creative:
+  #   font: "Georgia"
+  #   linestretch: "1.2"
+
+# =============================================================================
+# PER-TEMPLATE-PER-VERSION OVERRIDES
+# =============================================================================
+# Override settings for specific version within a specific template
+# This has the highest priority (except command-line arguments)
+template_versions:
+  # Example: Customize a specific version of a specific template
+  # 1.TEMPLATE.md:
+  #   technical:
+  #     output_name: "jane_smith_technical"
+  #     fontsize: "10pt"
+  #   management:
+  #     output_name: "jane_smith_management"
+  #     fontsize: "11pt"
+
+  # 2.TEMPLATE.md:
+  #   creative:
+  #     font: "Georgia"
+  #     output_name: "alex_johnson_creative"
+
+# =============================================================================
+# CONFIGURATION PRIORITY
+# =============================================================================
+# Settings are merged in this order (later overrides earlier):
+# 1. global (lowest priority)
+# 2. templates
+# 3. versions
+# 4. template_versions
+# 5. Command-line arguments (highest priority)
+#
+# Example: If global.font is "Arial" but template_versions.1.TEMPLATE.md.technical.font
+# is "Courier", then the technical version of 1.TEMPLATE.md will use Courier.
+# =============================================================================
